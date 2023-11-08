@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import 'bootstrap/dist/css/bootstrap.css'
+import NavBarComponent from './Components/NavBarComponent'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +13,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="es">
+      
+      <body>
+        <NavBarComponent/>
+        {children}
+        <footer className='text-center bg-secondary dysplay-4 text-white'>Derechos Reservados</footer>
+      </body>
+       
     </html>
   )
 }
